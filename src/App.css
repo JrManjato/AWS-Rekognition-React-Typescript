@@ -1,0 +1,7 @@
+*{
+  color: black;
+}
+.result{
+  display: flex;
+  flex-direction: row;
+}

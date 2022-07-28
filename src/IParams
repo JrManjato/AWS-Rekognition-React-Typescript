@@ -1,0 +1,6 @@
+interface Iparams{
+    Image: {
+        Bytes: any;
+    };
+    Attributes: string[];
+}
