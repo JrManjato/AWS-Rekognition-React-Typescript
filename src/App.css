@@ -1,7 +1,109 @@
 *{
   color: black;
 }
+h1{
+  margin-left: 100px;
+}
 .result{
   display: flex;
   flex-direction: row;
+}
+.info {
+  margin-left: 0;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+  display: flex;
+  flex-direction: row;
+}
+.inputFile{
+  position: absolute;
+  top: 100px,
+  left 20px
+}
+ul{
+  margin-bottom: 30px;
+  list-style: none;
+}
+.progression{
+  height: 18px;
+  border: 1px solid black;
+}
+.AllProg{
+  position: relative;
+}
+.cacher{
+  display: none;
+}
+.pourcentage{
+  margin-right: 10px;
+  float: right;
+}
+.bi-caret-left-fill{
+  float: right;
+  margin-right: 10px;
+  margin-top: 10px;
+  font-size: 16px;
+}
+.bi-caret-down-fill{
+  float: right;
+  margin-right: 10px;
+  margin-top: 10px;
+  font-size: 16px;
+}
+.severalElts{
+  margin-left: -32.1px;
+}
+.landMarks{
+  justify-content: center;
+}
+.underImg{
+  margin-top: -1px;
+  margin-right: 3px;
+  border-top: 1px solid black;
+  display: flex;
+  flex-direction: column;
+}
+.pose{
+  margin-top: -1px;
+}
+.info_elt{
+  flex-basis : 33.3333333%;
+ /* border-right: 1px solid black;  */
+}
+.age{
+  height: 76.2px;
+}
+.bi-chevron-right{
+  margin-top: 0px;
+  float: left;
+}
+.bi-chevron-down{
+  margin-top: 0px;
+  float: left;
+}
+h2{
+  font-size: 20px;
+}
+.min-table{
+  margin-top: 50px;
+}
+.bi-arrow-down-up{
+  margin-top: 0px;
+  float: left;
+}
+.bi-emoji-smile{
+  margin-top: 0px;
+  float: left;
+}
+.bi-arrow-up{
+  color: green;
+  font-weight: bold;
+}
+.bi-arrow-down{
+  color: red;
+  font-weight: bold;
+}
+h4{
+  font-size: 20px;
+  font-weight: bold;
 }

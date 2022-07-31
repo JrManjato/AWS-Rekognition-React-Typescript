@@ -18,7 +18,7 @@ function App() {
         'ALL',
       ]
     };
-    rekognition.detectFaces(params, function (err: any, data: any) {
+    rekognition.detectFaces(params, function (err, data: any) {
       if (err) {
         console.log(err, err.stack);
       } // an error occurred
@@ -68,9 +68,8 @@ function App() {
   return (
     <div className="App">
       <h1>Facial analysis</h1>
-      <input type="file" name="fileToUpload" id="fileToUpload" accept="image/*" onChange={ProcessImage} />
-      <button className='btn btn-primary'>Getting started</button>
       <CheckScale data={data} scale={scale} image={image}/>
+      <input className='inputFile' type="file" name="fileToUpload" id="fileToUpload" accept="image/*" onChange={ProcessImage} />
     </div>
   );
 }
