@@ -2,7 +2,6 @@ import CSS from 'csstype';
 import { useState } from 'react';
 interface Props {
     data: any,
-   // ProgressionResult: CSS.Properties<0 | (string & {}), string & {}> ,
    icon: string | undefined,
     code: string
 }
@@ -14,6 +13,12 @@ export const List: React.FC<Props> = ({data, code, icon}) => {
         border: 1+"px solid black",
         backgroundColor: "rgb(0, 179, 224)",
         height: 18 + "px",
+    };
+    const boolFalse: CSS.Properties = {
+        color: "red",
+    };
+    const boolTrue: CSS.Properties = {
+        color: "green",
     };
     const [loadMore, setLoadMore] = useState<string>("bi bi-caret-left-fill");
     const [cacher, setCacher] = useState<string>("cacher");
@@ -43,15 +48,15 @@ export const List: React.FC<Props> = ({data, code, icon}) => {
     }
     return (
         <ul onClick={stater}>
-            <h2><i className={icon + " me-3"}></i>{code}<i className={loadMore}></i></h2>
-            <span>{spanDescription()}</span><span className="pourcentage">{data.Confidence?.toFixed(2)}%</span>
+            <h2><i className={icon + " me-2 ms-2"}></i>{code}<i className={loadMore}></i></h2>
+            <span className="ms-2">{spanDescription()}</span><span className="pourcentage">{data.Confidence?.toFixed(2)}%</span>
             <div className="AllProg" >
                 <div className="progression"></div>
                 <div className="progressionResult" style={ProgressionResult}></div>
             </div>
-            {cacher === "cacher" ? null : <div>
-                <li>Confidence: {data.Confidence}</li>
-                <li>Value: {data.Value?.toString()}</li>
+            {cacher === "cacher" ? null : <div className="mt-2">
+                <li className="ms-2">Confidence: {data.Confidence}</li>
+                <li className="ms-2 mt-1" style={data.Value === true? boolTrue : boolFalse}> <span>Value:</span> {data.Value?.toString()}</li>
             </div>}
         </ul>
     )

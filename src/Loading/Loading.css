@@ -7,7 +7,8 @@
     flex-direction: row;
     height: 500px;
     align-items: center;
-    border: 1px solid grey;
+    margin-top: 15px;
+    margin-bottom: 15px;
   }
   .imageLoader{
     display: flex;
